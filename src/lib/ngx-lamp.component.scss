@@ -1,0 +1,135 @@
+.om-lamp {
+  --om-lamp-color: rgb(34 211 238);
+  --om-lamp-background-color: rgb(2 6 23);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  .om-lamp-conic {
+    position: absolute;
+    inset: auto;
+    height: 14rem;
+    width: 50%;
+
+    &.om-lamp-conic-left {
+      right: 50%;
+      background-image: conic-gradient(
+        from 70deg at center top,
+        var(--om-lamp-color),
+        transparent,
+        transparent
+      );
+      opacity: 0.9;
+    }
+
+    &.om-lamp-conic-right {
+      left: 50%;
+      background-image: conic-gradient(
+        from 290deg at center top,
+        transparent,
+        transparent,
+        var(--om-lamp-color)
+      );
+      opacity: 0.9;
+    }
+
+    .om-lamp-conic-inner {
+      position: absolute;
+      width: 100%;
+      height: 10rem;
+      bottom: 0;
+      background-color: var(--om-lamp-background-color);
+      z-index: 20;
+      -webkit-mask-image: linear-gradient(0deg, #fff, transparent);
+      mask-image: linear-gradient(0deg, #fff, transparent);
+
+      &.om-lamp-conic-left-inner {
+        left: 0;
+      }
+
+      &.om-lamp-conic-right-inner {
+        right: 0;
+      }
+    }
+
+    .om-lamp-conic-outer {
+      position: absolute;
+      width: 16.666666%;
+      height: 100%;
+      bottom: 0;
+      background-color: var(--om-lamp-background-color);
+      z-index: 20;
+
+      &.om-lamp-conic-left-outer {
+        left: 0;
+        -webkit-mask-image: linear-gradient(90deg, #fff, transparent);
+        mask-image: linear-gradient(90deg, #fff, transparent);
+      }
+
+      &.om-lamp-conic-right-outer {
+        right: 0;
+        -webkit-mask-image: linear-gradient(270deg, #fff, transparent);
+        mask-image: linear-gradient(270deg, #fff, transparent);
+      }
+    }
+  }
+
+  .om-lamp-filter-bottom {
+    position: absolute;
+    top: 50%;
+    height: 12rem;
+    width: 100%;
+    background-color: var(--om-lamp-background-color);
+    transform: translate(0, 3rem) scaleX(1.5);
+    filter: blur(40px);
+  }
+
+  .om-lamp-center-shine-big {
+    position: absolute;
+    inset: auto;
+    z-index: 50;
+    height: 9rem;
+    width: 43.75%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: var(--om-lamp-color);
+    opacity: 0.4;
+    filter: blur(64px);
+  }
+
+  .om-lamp-center-shine-small {
+    position: absolute;
+    inset: auto;
+    z-index: 30;
+    height: 9rem;
+    width: 25%;
+    transform: translateY(-6rem);
+    border-radius: 50%;
+    background-color: var(--om-lamp-color);
+    filter: blur(40px);
+  }
+
+  .om-lamp-line {
+    position: absolute;
+    inset: auto;
+    z-index: 50;
+    height: 0.125rem;
+    width: 50%;
+    transform: translateY(-7rem);
+    background-color: var(--om-lamp-color);
+  }
+
+  .om-lamp-top-shadow {
+    position: absolute;
+    inset: auto;
+    z-index: 40;
+    height: 11rem;
+    width: 100%;
+    transform: translateY(-12.5rem);
+    background-color: var(--om-lamp-background-color);
+  }
+}
