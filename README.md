@@ -1,5 +1,13 @@
 # ngx-lamp
 
+<a href="https://ngxui.com" target="_blank" style="display: flex;gap: .5rem;align-items: center;cursor: pointer; padding: 0 0 0 0; height: fit-content;">
+  <img src="https://ngxui.com/assets/img/ngxui-logo.png" style="width: 64px;height: 64px;">
+  <p style="font-weight: bold; padding: 0; margin: 0; font-size: 4rem">NGXUI</p>
+</a>
+
+This Library is part of the NGXUI ecosystem. <br>
+View all available components at https://ngxui.com
+
 `@omnedia/ngx-lamp` is an Angular library that provides a customizable lamp effect component. The component allows for flexible configuration of the lamp's color and background color, enabling you to create various glowing effects that can enhance the visual appeal of your Angular application.
 
 ## Features
@@ -21,21 +29,23 @@ npm install @omnedia/ngx-lamp
 Import the `NgxLampComponent` in your Angular module or component:
 
 ```typescript
-import { NgxLampComponent } from '@omnedia/ngx-lamp';
+import {NgxLampComponent} from '@omnedia/ngx-lamp';
 
 @Component({
   ...
-  imports: [
-    ...
-    NgxLampComponent,
-  ],
+    imports:
+[
   ...
+    NgxLampComponent,
+],
+...
 })
 ```
 
 Use the component in your template:
 
 ```html
+
 <om-lamp [lampColor]="'#ffcc00'" [backgroundColor]="'#1e1e1e'" styleClass="custom-lamp"></om-lamp>
 ```
 
@@ -47,6 +57,7 @@ Use the component in your template:
 ## API
 
 ```html
+
 <om-lamp
   [lampColor]="lampColor"
   [backgroundColor]="backgroundColor"
@@ -61,6 +72,7 @@ Use the component in your template:
 ## Example
 
 ```html
+
 <om-lamp [lampColor]="'#ff6347'" [backgroundColor]="'#000000'" styleClass="lamp-container">
 </om-lamp>
 ```
@@ -68,6 +80,7 @@ Use the component in your template:
 This will create a lamp effect with a tomato-colored glow and a black background.
 
 ## Styling
+
 `.om-lamp`
 
 - The main container for the lamp effect. You can apply global or custom styles using the styleClass input. The component uses CSS variables for easy control over the lamp's appearance.
@@ -78,8 +91,9 @@ This will create a lamp effect with a tomato-colored glow and a black background
 In this example, the lamp and its background are styled with custom colors via css instead of API values:
 
 ```html
+
 <div class="lamp-wrapper">
-    <om-lamp styleClass="custom-lamp"></om-lamp>
+  <om-lamp styleClass="custom-lamp"></om-lamp>
 </div>
 ```
 
